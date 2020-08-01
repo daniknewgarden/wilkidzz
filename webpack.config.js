@@ -8,8 +8,7 @@ module.exports = {
     entry: __dirname + "/src/js/index.js", // webpack entry point. Module to start building dependency graph
     output: {
         path: __dirname + '/dist', // Folder to store generated bundle
-        filename: 'bundle.js', // Name of generated bundle after build
-        publicPath: '/' // public URL of the output directory when referenced in a browser
+        filename: 'bundle.js' // public URL of the output directory when referenced in a browser
     },
     module: {
         rules: [{
@@ -76,10 +75,10 @@ module.exports = {
             chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css' 
         }),
         new CopyPlugin({
-      patterns: [
-        { from: 'src/static/images', to: 'images' }
-      ],
-    }),
+            patterns: [
+              { from: 'src/static/images', to: 'images' }
+            ],
+        }),
     ],
     devServer: { // configuration for webpack-dev-server
         contentBase: './src', //source of static assets

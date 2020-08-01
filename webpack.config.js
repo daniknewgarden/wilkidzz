@@ -5,7 +5,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Require  html-webpack-plugin plugin
 
 module.exports = {
-    entry: __dirname + "/src/js/index.js", // webpack entry point. Module to start building dependency graph
+    entry: __dirname + "/src/index.js", // webpack entry point. Module to start building dependency graph
     output: {
         path: __dirname + '/dist', // Folder to store generated bundle
         filename: 'bundle.js' // public URL of the output directory when referenced in a browser

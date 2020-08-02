@@ -1,5 +1,10 @@
-$primary-color: #28a;
+@import 'utils/mixins';
+@import "~rfs/scss";
 
-body {
-    color: $primary-color;
+html {
+    font-size: 16px;
+}
+
+h1 {
+   @include font-size(64px)
 }

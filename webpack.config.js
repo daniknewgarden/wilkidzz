@@ -42,6 +42,13 @@ module.exports = {
             }
           },
           {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: isDevelopment,
+              config: { path: `./postcss.config.js` }
+            }
+          },
+          {
             loader: 'sass-loader',
             options: {
               sourceMap: isDevelopment
@@ -55,6 +62,15 @@ module.exports = {
         loader: [
           isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: isDevelopment,
+              config: {
+                path: `./postcss.config.js`
+              }
+            }
+          },
           {
             loader: 'sass-loader',
             options: {

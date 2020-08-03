@@ -81,23 +81,7 @@ module.exports = {
           }
         }]
       },
-      // //Svg images and icons
-      // {
-      // {
-      //   test: /\.svg$/,
-      //   exclude: path.resolve(__dirname, 'static/images/icons'),
-      //   use: [{
-      //       loader: 'svg-inline-loader',
-      //       options: {
-      //         name: '[name].[ext]',
-      //         outputPath: 'images/'
-      //       }
-      //     },
-      //     {
-      //       loader: 'file-loader'
-      //     }
-      //   ]
-      // },
+      //Fonts
       {
         test: /\.woff(2)?$/,
         loader: 'file-loader',
@@ -119,12 +103,12 @@ module.exports = {
       filename: isDevelopment ? '[name].css' : '[name].css',
       chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css'
     }),
-    // new CopyPlugin({
-    //   patterns: [{
-    //     from: 'src/static/images',
-    //     to: 'images'
-    //   }],
-    // }),
+    new CopyPlugin({
+      patterns: [{
+        from: 'src/static/images',
+        to: 'images'
+      }],
+    }),
   ],
   devServer: { // configuration for webpack-dev-server
     contentBase: './src', //source of static assets

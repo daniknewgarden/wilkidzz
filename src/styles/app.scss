@@ -1,10 +1,134 @@
 @import 'utils/mixins';
+@import 'utils/vars';
 @import "~rfs/scss";
+
+@font-face {
+    font-family: SegoeUI;
+    src:
+        local("Segoe UI"),
+        url(../static/fonts/segoe-ui.woff2) format("woff2"),
+        url(../static/fonts/segoe-ui.woff) format("woff");
+    font-weight: 400;
+}
 
 html {
     font-size: 16px;
 }
 
-h1 {
-   @include font-size(64px)
+* {
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+li a {
+    text-decoration: none;
+    font-family: SegoeUI, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    // border: none;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 28px;
+    width: 100%;
+    max-height: 66px;
+    // .header__logo
+    &__logo {
+        width: 62px;
+        height: 46px;
+    }
+    // .header__menu-btn
+    &__menu-btn {
+        position: relative;
+        width: 46px;
+        height: 25px;
+        background: transparent;
+        // .menu-btn__line
+        .menu-btn__line {
+            position: absolute;
+            right: 0;
+            display: block;
+            width: 100%;
+            height: 5px;
+            background: $color-link;
+            &:first-child {
+                top: 0;
+            }
+            &:nth-child(2) {
+                top: 10px;
+            }
+            &:last-child {
+                top: 20px;
+                width: 30px;
+            }
+        }
+    }
+}
+
+.main-nav {
+    position: absolute;
+    top: 66px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 60px 0 40px 0;
+    // .main-nav__list
+    &__list {
+        @include reset-list();
+        text-align: center;
+    }
+
+    // .main-nav__item
+    &__item {
+        margin-bottom: 35px;
+    }
+
+    // .main-nav__link
+    &__link {
+        font-size: 36px;
+        letter-spacing: 0.54px;
+        line-height: 27px;
+        color: $color-link;
+    }
+
+    // .main-nav__phone
+    &__phone {
+        padding-left: 3px;
+        height: 300px!important;
+        background: url("../static/images/icons/phone.svg");
+    }
+
+    // .main-nav__subtitle
+    &__subtitle {}
+
+    // .main-nav__button
+    &__button {}
+
+    // .main-nav__button-lang
+    &__button-lang {}
+
+    // .main-nav__button-cart
+    &__button-cart {}
+
+    // .main-nav__goods-count
+    &__goods-count {}
+
+    // .main-nav__goods-cost
+    &__goods-cost {}
+}
+
+.main {
+    height: 30000px;
 }

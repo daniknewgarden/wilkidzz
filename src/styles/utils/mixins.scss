@@ -5,10 +5,15 @@
   list-style: none;
 }
 
+//reset elem (remove margin and padding)
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+
 //make a horisontal list 
 @mixin horizontal-list {
   @include reset-list;
-
   li {
     display: inline-block;
     margin: {
@@ -17,3 +22,4 @@
     }
   }
 }
+

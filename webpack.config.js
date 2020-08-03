@@ -19,9 +19,9 @@ module.exports = {
             ]
         },
         {
-          test: /\.(jpe?g|png|gif|svg)$/i,
+          test: /\.(jpe?g|png|gif|webp)$/i,
           /* Exclude fonts while working with images, e.g. .svg can be both image or font. */
-          exclude: path.resolve(__dirname, '../src/static/images'),
+          // exclude: path.resolve(__dirname, '../src/static/images'),
           use: [{
             loader: 'file-loader',
             options: {
@@ -31,9 +31,45 @@ module.exports = {
           }]
         },
         {
+          test: /\.svg$/,
+          oneOf: [{
+              exclude: path.resolve(__dirname, 'static/images/icons'),
+              use: [{
+                loader: 'svg-inline-loader',
+                options: {
+                  name: '[name].[ext]',
+                  outputPath: 'images/'
+                }
+              }]
+            },
+            {
+              include: path.resolve(__dirname, 'static/images/icons'),
+              use: [{
+                loader: 'file-loader',
+                options: {
+                  name: '[name].[ext]',
+                  outputPath: 'images/'
+                }
+              }]
+            },
+          ],
+        }, 
+        {
         test: /\.module\.s(a|c)ss$/,
         loader: [
           isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: isDevelopment
+            }
+          },
+          {
+            loader: 'resolve-url-loader',
+            options: {
+              root: path.join(__dirname, 'src')
+            }
+          },
           {
             loader: 'css-loader',
             options: {
@@ -48,12 +84,7 @@ module.exports = {
               config: { path: `./postcss.config.js` }
             }
           },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: isDevelopment
-            }
-          }
+          
         ]
       },
       {
@@ -78,6 +109,13 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]'
+        }
       }]
     },
     resolve: {extensions: ['.js', '.jsx', '.scss']},
@@ -92,7 +130,7 @@ module.exports = {
         }),
         new CopyPlugin({
             patterns: [
-              { from: 'src/static/images', to: 'images' }
+              { from: 'src/static/images', to: 'static/images' }
             ],
         }),
     ],

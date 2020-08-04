@@ -183,6 +183,7 @@
     }
 }
 
+//Large desktop
 @media (min-width: 1470px) {
     .menu {
         margin-left: 6%;
@@ -195,6 +196,7 @@
     }
 }
 
+//Extra large desktop
 @media (min-width: 1620px) {
     .menu {
         &__buttons {
@@ -204,8 +206,4 @@
             margin: 0 35px;
         }
     }
-}
-
-.main {
-    height: 30000px;
 }

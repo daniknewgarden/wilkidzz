@@ -1,0 +1,60 @@
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 416px;
+    padding: 15px;
+    color: $color-body;
+    background: url(../static/images/first-screen/first-screen-mobile.jpg) no-repeat center;
+    background-size: cover;
+    &__title {
+        font-size: 56px;
+        font-weight: 600;
+        line-height: 82px;
+        font-family: Poppins;
+        max-width: 580px;
+    }
+    &__subtitle {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 30px;
+        max-width: 580px;
+    }
+}
+
+@media (min-width: 500px) {
+    .welcome {
+        background: url(../static/images/first-screen/first-screen-tablet.jpg) no-repeat center;
+        background-size: cover;
+    }
+}
+
+@media (min-width: 1000px) {
+    .welcome {
+        background: url(../static/images/first-screen/first-screen.jpg) no-repeat center;
+        background-size: cover;
+        min-height: 600px;
+        padding-left: 5%;
+        &__title {
+            font-size: 64px;
+        }
+        &__subtitle {
+            font-size: 28px;
+        }
+    }
+}
+
+@media (min-width: 1300px) {
+    .welcome {
+        padding-left: 10%;
+        max-height: 650px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .welcome {
+        padding-left: 16%;
+        max-height: 720px;
+    }
+}

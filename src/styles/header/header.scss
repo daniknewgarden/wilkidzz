@@ -1,0 +1,44 @@
+@import '../utils/mixins';
+@import '../utils/vars';
+@import "~rfs/scss";
+
+//Header styles
+.header {
+    position: fixed;
+    padding: 12px 28px;
+    width: 100%;
+    background-color: $color-body;
+    // .header__logo
+    &__logo {
+        width: 62px;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+//Header desktop switch
+@media (min-width: 1425px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        &__logo {
+            width: 116px;
+        }
+    }
+}
+
+//Large desktop
+@media (min-width: 1800px) {
+    .header {
+        padding: 12px 5%;
+    }
+}
+
+//Extra large desktop
+@media (min-width: 1900px) {
+    .header {
+        padding: 12px 9.21%;
+    }
+}

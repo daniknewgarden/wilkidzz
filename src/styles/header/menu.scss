@@ -1,21 +1,3 @@
-@import 'utils/mixins';
-@import 'utils/vars';
-@import "~rfs/scss";
-
-//Header styles
-.header {
-    position: fixed;
-    padding: 10px 28px;
-    width: 100%;
-    background-color: $color-body;
-    // .header__logo
-    &__logo {
-        width: 62px;
-        position: relative;
-        z-index: 1;
-    }
-}
-
 //Header menu
 .menu {
     position: absolute;
@@ -65,7 +47,12 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+    }
+
+    //Menu controls: phone link and buttons
+    &__control {
+        margin-bottom: 10px;
     }
 
     // .menu__phone
@@ -88,9 +75,6 @@
         color: $color-text;
     }
 
-    // .menu__button
-    &__button {}
-
     // .menu__lang
     &__lang {
         font-size: 18px;
@@ -98,10 +82,8 @@
         letter-spacing: 0.63px;
         line-height: 27px;
         color: $color-text;
+        margin: 0 5px;
     }
-
-    // .menu__cart
-    &__cart {}
 
     // .menu__goods-count
     &__goods-count {
@@ -110,7 +92,6 @@
         padding: 10px 5px 5px 5px;
         font-size: 12px;
         font-weight: 300;
-        color: $color-body;
     }
 
     // .menu__goods-cost
@@ -127,7 +108,7 @@
     &.menu-opened {
 
         //Button
-        .btn {
+        .menu__btn {
             .btn__line {
                 &:first-child {
                     top: 10px;
@@ -155,33 +136,76 @@
     }
 }
 
-//Menu button
-.btn {
-    width: 46px;
-    height: 25px;
-    background: transparent;
-
-    // .btn__line
-    &__line {
-        position: absolute;
-        right: 0;
-        display: block;
-        width: 100%;
-        height: 5px;
-        border-radius: 5px;
-        background: $color-link;
-
-        &:first-child {
-            top: 0;
+//Desktop menu switch
+@media (min-width: 1425px) {
+    .menu {
+        position: relative;
+        margin-left: 2%;
+        &__btn {
+            display: none;
+        }
+        &__items {
+            display: flex;
+            opacity: 1;
+            flex-direction: row;
+            justify-content: flex-end;
+            height: 100%;
+            padding: 0;
+        }
+        &__list {
+            display: flex;
+            align-items: center;
+        }
+        &__item {
+            margin-bottom: 0;
+            &:not(:first-child) {
+                margin-left: 55px;
+            }
+        }
+        &__link {
+            font-size: 20px;
+            letter-spacing: 0.3px;
         }
 
-        &:nth-child(2) {
-            top: 10px;
+        //Left menu buttons
+        &__buttons {
+            margin-left: 2%;
+            flex-wrap: nowrap;
         }
 
-        &:last-child {
-            top: 20px;
-            width: 30px;
+        &__control {
+            margin-bottom: 0;
+        }
+
+        &__lang {
+            margin: 5px;
         }
     }
+}
+
+@media (min-width: 1470px) {
+    .menu {
+        margin-left: 6%;
+        &__buttons {
+            margin-left: 3%;
+        }
+        &__lang {
+            margin: 0 10px;
+        }
+    }
+}
+
+@media (min-width: 1620px) {
+    .menu {
+        &__buttons {
+            margin-left: 5.5%;
+        }
+        &__lang {
+            margin: 0 35px;
+        }
+    }
+}
+
+.main {
+    height: 30000px;
 }

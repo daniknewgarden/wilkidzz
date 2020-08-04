@@ -1,6 +1,9 @@
 @import 'utils/mixins';
 @import 'utils/vars';
-@import "~rfs/scss";
+@import '~rfs/scss';
+@import 'header/header.scss';
+@import 'header/menu.scss';
+@import 'header/menu-button.scss';
 
 @font-face {
     font-family: SegoeUI;
@@ -16,6 +19,7 @@ html {
 }
 
 * {
+    border: 1px solid tomato;
     box-sizing: border-box;
     transition: .25s ease-in-out;
 }

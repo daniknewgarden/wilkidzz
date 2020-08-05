@@ -1,0 +1,189 @@
+//Products article
+.products {
+    padding: 0 15px 0 5px;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+//Product card
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+    // .product__text-wrapper
+    &__text-wrapper {
+        padding: 30px 0 0 30px;
+        max-width: 500px;
+        background: url(../static/images/icons/title-decoration.svg) no-repeat;
+    }
+
+    // .product__title
+    &__title {
+        margin-bottom: 15px;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 30px;
+        color: $color-title;
+    }
+
+    // .product__subtitle
+    &__subtitle {
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25px;
+        color: $color-title;
+    }
+
+    // .product__list
+    &__list {
+        padding-left: 15px;
+        list-style: circle outside url(../static/images/icons/list-round.svg);
+    }
+
+    // .product__list-item
+    &__list-item {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        color: $color-text;
+        margin-bottom: 10px;
+        font-family: 'Segoe UI';
+    }
+
+    // .product__button
+    &__link {
+        display: inline-block;
+        padding: 18px 54px 18px 30px;
+        margin: 15px 0 25px 0;
+        border-radius: 4px;
+        background: url(../static/images/icons/arrow.svg) $color-accent no-repeat calc(100% - 30px) center;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.24px;
+        color: $color-body;
+    }
+
+    // .product__img
+    &__img {
+        img {
+            max-width: 100%;
+        }
+    }
+
+    // .product__img-wrapper
+    &__img-wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 0 0 25px 25px;
+        background: url(../static/images/background/red-bg-mobile.png) no-repeat bottom left;
+    }
+
+    //change background 
+
+    &--reversed {
+        .product__img-wrapper {
+            padding: 0 25px 25px 0;
+            background: url(../static/images/background/green-bg-mobile.png) no-repeat bottom right;
+        }
+    }
+
+    &--centered {
+        .product__img-wrapper {
+            padding: 0 25px 25px 0;
+            background: url(../static/images/background/blue-bg-mobile.png) no-repeat bottom right;
+        }
+    }
+
+}
+
+//Tablet mode 
+@media (min-width: 760px) {
+
+    //Product card
+    .product {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+
+        &__text-wrapper {
+            max-width: 60%;
+        }
+
+        &--reversed {
+            flex-direction: row-reverse;
+
+            .product__img-wrapper {
+                margin-left: 0;
+                margin-right: 3%;
+            }
+        }
+
+        &--centered {
+            justify-content: center;
+        }
+
+        &__img-wrapper {
+            margin-left: 3%;
+        }
+
+    }
+}
+
+//Desktop switch 
+@media (min-width: 830px) {
+    .products {
+        padding: 0 6% 0 3%;
+    }
+}
+
+//Wide screen (desktop image switch)
+@media (min-width: 1366px) {
+
+    .product {
+        margin-top: 130px;
+
+        &__text-wrapper {
+            max-width: 630px;
+            margin: 0 0 0 10%;
+        }
+
+        //New background image
+        &__img-wrapper {
+            max-height: 775px;
+            padding: 0 0 50px 50px;
+            background: url(../static/images/background/red-bg.png) no-repeat bottom left;
+            background-size: 87.8%;
+        }
+
+        &--reversed {
+            .product__text-wrapper {
+                margin: 0 8% 0 0;
+            }
+
+            .product__img-wrapper {
+                padding: 0 50px 50px 0;
+                background: url(../static/images/background/green-bg.png) no-repeat bottom right;
+                background-size: 81.6%;
+            }
+        }
+
+        &--centered {
+            .product__img-wrapper {
+                margin-left: 10.58%;
+                justify-content: flex-end;
+                padding: 0 50px 50px 0;
+                background: url(../static/images/background/blue-bg.png) no-repeat bottom right;
+                background-size: 72%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1699px) {
+    .products {
+        padding: 0;
+    }
+}

@@ -11,7 +11,9 @@
 //Main styles
 @import 'main/main.scss';
 @import 'main/first-screen.scss';
+@import 'main/products.scss';
 
+//Font
 @font-face {
     font-family: SegoeUI;
     src:
@@ -19,6 +21,20 @@
         url(../static/fonts/segoe-ui.woff2) format("woff2"),
         url(../static/fonts/segoe-ui.woff) format("woff");
     font-weight: 400;
+}
+
+h1,
+h2,
+button {
+    font-family: Poppins;
+}
+
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: "Segoe UI";
 }
 
 //Normalize
@@ -41,21 +57,14 @@ a {
     font-family: "Segoe UI";
 }
 
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
-}
-
-h1 {
-    font-family: Poppins;
-}
-
+h1,
 h2,
 h3,
 h4,
 h5,
 h6,
 p {
-    font-family: "Segoe UI";
+    margin: 0;
 }
 
 body {
@@ -73,4 +82,3 @@ button {
 body.scroll-lock {
     overflow-y: hidden;
 }
-

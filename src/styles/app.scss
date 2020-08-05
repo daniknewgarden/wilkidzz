@@ -11,7 +11,9 @@
 //Main styles
 @import 'main/main.scss';
 @import 'main/first-screen.scss';
+@import './main/content-link.scss';
 @import 'main/products.scss';
+@import './main/how-we.scss';
 
 //Font
 @font-face {
@@ -35,15 +37,22 @@ h5,
 h6,
 p {
     font-family: "Segoe UI";
+
 }
+
+//Adaptive font size
+html {
+
+    @media screen and (max-width: 1440px) {
+        font-size: 18px;
+    }
+}
+
+
 
 //Normalize
-html {
-    font-size: 16px;
-}
-
 * {
-    border: 1px solid tomato;
+    // border: 1px solid tomato;
     box-sizing: border-box;
     transition: .25s ease-in-out;
 }

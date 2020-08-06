@@ -11,12 +11,18 @@
 //Main styles
 @import 'main/main.scss';
 @import 'main/first-screen.scss';
-@import './main/content-link.scss';
-@import './main/content-title.scss';
 @import 'main/products.scss';
 @import './main/how-we.scss';
 @import './main/reviews.scss';
 @import './main/contacts.scss';
+
+//Components
+//Titles, text and links
+@import './main/main-title.scss';
+@import './main/main-link.scss';
+@import './main/secondary-title.scss';
+@import './main/secondary-text.scss';
+
 
 //Fonts
 

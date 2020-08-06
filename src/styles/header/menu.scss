@@ -134,16 +134,16 @@
             }
         }
     }
-}
 
-//Desktop menu switch
-@media (min-width: 1425px) {
-    .menu {
+    //Desktop menu switch
+    @media (min-width: 1425px) {
         position: relative;
         margin-left: 2%;
+
         &__btn {
             display: none;
         }
+
         &__items {
             display: flex;
             opacity: 1;
@@ -152,16 +152,20 @@
             height: 100%;
             padding: 0;
         }
+
         &__list {
             display: flex;
             align-items: center;
         }
+
         &__item {
             margin-bottom: 0;
+
             &:not(:first-child) {
                 margin-left: 55px;
             }
         }
+
         &__link {
             font-size: 20px;
             letter-spacing: 0.3px;
@@ -181,27 +185,26 @@
             margin: 5px;
         }
     }
-}
 
-//Large desktop
-@media (min-width: 1470px) {
-    .menu {
+    //Large desktop
+    @media (min-width: 1470px) {
         margin-left: 6%;
+
         &__buttons {
             margin-left: 3%;
         }
+
         &__lang {
             margin: 0 10px;
         }
     }
-}
 
-//Extra large desktop
-@media (min-width: 1620px) {
-    .menu {
+    //Extra large desktop
+    @media (min-width: 1620px) {
         &__buttons {
             margin-left: 5.5%;
         }
+
         &__lang {
             margin: 0 35px;
         }

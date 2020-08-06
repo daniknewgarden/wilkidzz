@@ -23,17 +23,13 @@
         line-height: 30px;
         max-width: 580px;
     }
-}
 
-@media (min-width: 500px) {
-    .welcome {
+    @media (min-width: 500px) {
         background: url(../static/images/first-screen/first-screen-tablet.jpg) no-repeat center;
         background-size: cover;
     }
-}
 
-@media (min-width: 1000px) {
-    .welcome {
+    @media (min-width: 1000px) {
         background: url(../static/images/first-screen/first-screen.jpg) no-repeat center;
         background-size: cover;
         min-height: 600px;
@@ -47,18 +43,17 @@
             font-size: 28px;
         }
     }
-}
 
-@media (min-width: 1300px) {
-    .welcome {
+    @media (min-width: 1300px) {
         padding-left: 10%;
         min-height: 650px;
     }
-}
 
-@media (min-width: 1700px) {
-    .welcome {
+    @media (min-width: 1700px) {
         padding-left: 16%;
         min-height: 720px;
     }
+
 }
+
+

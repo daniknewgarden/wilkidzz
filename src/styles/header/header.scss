@@ -6,6 +6,7 @@
 .header {
     position: fixed;
     top: 0;
+    z-index: 999;
     padding: 12px 28px;
     width: 100%;
     background-color: $color-body;
@@ -16,11 +17,9 @@
         position: relative;
         z-index: 1;
     }
-}
 
-//Header desktop switch
-@media (min-width: 1425px) {
-    .header {
+    //Header desktop switch
+    @media (min-width: 1425px) {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -30,30 +29,15 @@
             width: 116px;
         }
     }
-}
 
-//Large desktop
-@media (min-width: 1800px) {
-    .header {
+    //Large desktop
+    @media (min-width: 1800px) {
         padding: 12px 5%;
     }
-}
 
-//Extra large desktop
-@media (min-width: 1900px) {
-    .header {
+    //Extra large desktop
+    @media (min-width: 1900px) {
         padding: 12px 9.21%;
+
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

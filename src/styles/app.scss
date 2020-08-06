@@ -12,18 +12,13 @@
 @import 'main/main.scss';
 @import 'main/first-screen.scss';
 @import './main/content-link.scss';
+@import './main/content-title.scss';
 @import 'main/products.scss';
 @import './main/how-we.scss';
+@import './main/reviews.scss';
+@import './main/contacts.scss';
 
-//Font
-@font-face {
-    font-family: SegoeUI;
-    src:
-        local("Segoe UI"),
-        url(../static/fonts/segoe-ui.woff2) format("woff2"),
-        url(../static/fonts/segoe-ui.woff) format("woff");
-    font-weight: 400;
-}
+//Fonts
 
 h1,
 h2,
@@ -35,18 +30,10 @@ h3,
 h4,
 h5,
 h6,
-p {
-    font-family: "Segoe UI";
-
-}
+p {}
 
 //Adaptive font size
-html {
-
-    @media screen and (max-width: 1440px) {
-        font-size: 18px;
-    }
-}
+html {}
 
 
 

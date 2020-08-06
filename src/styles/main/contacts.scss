@@ -1,0 +1,75 @@
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 565px;
+    padding: 15px;
+    background: url(../static/images/contacts/con-bg-mobile.jpg) no-repeat center;
+    background-size: cover;
+    text-align: center;
+
+    // .contacts__title
+    &__title {}
+
+    // .contacts__text
+    &__text {
+        margin-top: 35px;
+    }
+
+    // .contacts__bottom-part
+    &__bottom-part {
+        border-top: 1px solid #ebebeb;
+        width: 80%;
+        margin-top: 45px;
+        padding: 50px 0;
+    }
+
+    // .contacts__number
+    &__number {
+        font-family: Barlow;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 25px;
+        color: $color-body;
+    }
+
+    // .contacts__schedule
+    &__schedule {
+        margin-top: 22px;
+        font-family: Barlow;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 17px;
+        color: $color-body;
+    }
+
+    @media (min-width: 500px) {
+        background: url(../static/images/contacts/con-bg-tablet.jpg) no-repeat center;
+        background-size: cover;
+    }
+
+    @media (min-width: 1000px) {
+        background: url(../static/images/contacts/con-bg.jpg) no-repeat center;
+        background-size: cover;
+
+        &__bottom-part {
+            width: 44.736%;
+        }
+    }
+}
+
+.secondary-title {
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 50px;
+    color: $color-body;
+}
+
+.secondary-text {
+    font-family: Barlow;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 25px;
+    color: $color-body;
+}

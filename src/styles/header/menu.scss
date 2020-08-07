@@ -36,9 +36,11 @@
 
     // .menu__link
     &__link {
+        font-family: Barlow;
         font-size: 36px;
-        letter-spacing: 0.54px;
+        font-weight: 400;
         line-height: 27px;
+        letter-spacing: 0.3px;
         color: $color-link;
     }
 
@@ -61,14 +63,14 @@
         max-width: 185px;
         background: url("../static/images/icons/phone.svg") no-repeat left center;
         font-size: 18px;
-        font-weight: 400;
-        letter-spacing: 0.99px;
+        font-weight: 700;
         color: $color-link;
     }
 
     // .menu__subtitle
     &__subtitle {
         margin-left: 7px;
+        font-family: Barlow;
         font-size: 14px;
         font-weight: 400;
         line-height: 27px;
@@ -92,15 +94,17 @@
         padding: 10px 5px 5px 5px;
         font-size: 12px;
         font-weight: 300;
+        color: $color-body;
     }
 
     // .menu__goods-cost
     &__goods-cost {
         margin-left: 10px;
+        font-family: Barlow;
         font-size: 17px;
-        font-weight: 400;
-        letter-spacing: 0.26px;
+        font-weight: 700;
         line-height: 27px;
+        letter-spacing: 0.26px;
         color: $color-link;
     }
 

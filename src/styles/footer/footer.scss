@@ -1,0 +1,125 @@
+.footer {
+
+    // .footer__menu
+    &__menu {}
+
+    // .footer__nav-title
+    &__nav-title {}
+
+    // .footer__copyright
+    &__copyright {}
+}
+
+.footer-menu {
+    padding: 70px 0 65px 0;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    // .footer-menu__item
+    &__item {
+        min-width: 300px;
+        max-width: 440px;
+        padding: 15px 0;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $color-line;
+
+            @media (min-width: 600px) {
+                border-bottom: 0;
+                border-right: 1px solid $color-line;
+            }
+        }
+
+        @media (min-width: 1000px) {
+            padding: 15px 7.8%;
+        }
+
+    }
+
+    // .footer-menu__item-title
+    &__item-title {
+        margin-bottom: 15px;
+    }
+
+    // .footer-menu__list
+    &__list {
+        @include reset-list();
+    }
+
+    // .footer-menu__list-item
+    &__list-item {}
+
+    // .footer-menu__link
+    &__link {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 34px;
+        color: $color-text;
+    }
+
+    // .footer-menu__social-wrapper
+    &__social-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    // .footer-menu__social-link
+    &__social-link {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid $color-line;
+
+        &:not(:first-child) {
+            margin-left: 15px;
+        }
+
+        //Icons
+        &.facebook {
+            background: url(../static/images/icons/facebook.png) no-repeat center;
+        }
+
+        &.instagram {
+            background: url(../static/images/icons/instagram.svg) no-repeat center;
+        }
+    }
+}
+
+.copyright {
+
+    padding: 30px 6%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: Barlow;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    color: $color-info;
+    border-top: 1px solid $color-line;
+
+    // .copyright__company
+    &__company {}
+
+    // .copyright__developers
+    &__developers {}
+
+    // .copyright__img
+    &__img {
+        display: inline-flex;
+        align-items: flex-end;
+        margin-left: 10px;
+        height: 100%;
+    }
+
+    @media (min-width: 590px) {
+        justify-content: space-between;
+    }
+
+    @media (min-width: 1000px) {
+        padding: 30px 16%;
+    }
+}

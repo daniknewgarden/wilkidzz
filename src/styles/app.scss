@@ -16,6 +16,9 @@
 @import './main/reviews.scss';
 @import './main/contacts.scss';
 
+//Footer styles
+@import './footer/footer.scss';
+
 //Components
 //Titles, text and links
 @import './main/main-title.scss';
@@ -25,21 +28,20 @@
 
 
 //Fonts
+html {
+    font-family: 'Barlow',
+        sans-serif;
+}
 
 h1,
 h2,
-button {
-    font-family: Poppins;
-}
-
 h3,
 h4,
 h5,
 h6,
-p {}
-
-//Adaptive font size
-html {}
+button {
+    font-family: 'Poppins', sans-serif;
+}
 
 
 
@@ -50,13 +52,10 @@ html {}
     transition: .25s ease-in-out;
 }
 
-li a {
-    font-family: SegoeUI, sans-serif;
-}
+
 
 a {
     text-decoration: none;
-    font-family: "Segoe UI";
 }
 
 h1,
@@ -83,4 +82,14 @@ button {
 
 body.scroll-lock {
     overflow-y: hidden;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }

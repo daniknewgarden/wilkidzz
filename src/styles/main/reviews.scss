@@ -1,114 +1,116 @@
 .reviews {
-    margin: 50px 0;
-    padding: 0 15px;
+  margin: 50px 0;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // .reviews__title
+  &__title {
+    margin-right: 50px;
+    margin-bottom: 20px;
+    font-size: 42px;
+  }
+
+  // .reviews__reviews-wrapper
+  &__cards-wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 1px dashed #ebebeb;
+  }
 
-    // .reviews__title
+  // .reviews__card
+  &__card {
+  }
+
+  // .reviews__link
+  &__link {
+    margin-top: 50px;
+  }
+
+  @media (min-width: 700px) {
+    margin: 145px 0 175px 0;
+
     &__title {
-        margin-right: 30px;
-        margin-bottom: 20px;
+      margin-bottom: 60px;
     }
-
-    // .reviews__reviews-wrapper
-    &__cards-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        border-bottom: 1px dashed #ebebeb;
-    }
-
-    // .reviews__card
-    &__card {}
-
-    // .reviews__link
-    &__link {
-        margin-top: 50px;
-    }
-
-    @media (min-width: 700px) {
-        margin: 145px 0 175px 0;
-
-        &__title {
-            margin-bottom: 60px;
-        }
-    }
+  }
 }
 
-
-.review {}
+.review {
+}
 
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 410px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 410px;
 
-    // .card__text-wrapper
-    &__text-wrapper {
-        padding: 40px;
-        box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
-        position: relative;
+  // .card__text-wrapper
+  &__text-wrapper {
+    padding: 40px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+    position: relative;
 
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            margin-left: -7px;
-            border: 10px solid transparent;
-            border-top: 10px solid $color-body;
-        }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      margin-left: -13px;
+      border: 10px solid transparent;
+      border-top: 10px solid $color-body;
+    }
+  }
+
+  // .card__title
+  &__title {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: $color-link;
+  }
+
+  // .card__text
+  &__text {
+    padding-left: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+    color: $color-text;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 14px;
+      height: 11px;
+      background: url(../static/images/icons/quote.svg);
+      display: inline-block;
+    }
+  }
+
+  // .card__subtitle
+  &__subtitle {
+    margin: 20px 0 15px 0;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+
+  @media (min-width: 800px) {
+    &:not(:first-child) {
+      margin-left: 30px;
     }
 
-    // .card__title
-    &__title {
-        margin-bottom: 20px;
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 28px;
-        color: $color-link;
-    }
-
-    // .card__text
-    &__text {
-        padding-left: 30px;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 23px;
-        color: $color-text;
-        position: relative;
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 7px;
-            left: 0;
-            width: 14px;
-            height: 11px;
-            background: url(../static/images/icons/quote.svg);
-            display: inline-block;
-        }
-    }
-
-    // .card__subtitle
     &__subtitle {
-        margin: 20px 0 15px 0;
-        font-size: 18px;
-        font-weight: 600;
-        letter-spacing: 0.27px;
-        line-height: 25px;
+      margin: 40px 0 50px 0;
     }
-
-    @media (min-width: 800px) {
-        &:not(:first-child) {
-            margin-left: 30px;
-        }
-
-        &__subtitle {
-            margin: 40px 0 50px 0;
-        }
-    }
+  }
 }

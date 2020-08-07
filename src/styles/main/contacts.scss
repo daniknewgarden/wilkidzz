@@ -53,11 +53,18 @@
         background: url(../static/images/contacts/con-bg.jpg) no-repeat center;
         background-size: cover;
 
+        &__title {
+            font-size: 42px;
+        }
+
+        &__text {
+            font-size: 24px;
+            line-height: 36px;
+            max-width: 730px;
+        }
+
         &__bottom-part {
             width: 44.736%;
         }
     }
 }
-
-
-

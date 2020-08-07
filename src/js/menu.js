@@ -1,9 +1,13 @@
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import {
+    disableBodyScroll,
+    enableBodyScroll,
+    clearAllBodyScrollLocks
+} from 'body-scroll-lock';
 
 const menu = document.querySelector('.header__menu'),
     menuBtn = menu.querySelector('.menu__btn'),
     menuItems = document.querySelector('.menu__items'),
-    menuLinks = menuItems.querySelectorAll('a[href^="#"]');
+    menuLinks = document.querySelectorAll('a[href^="#"]');
 
 function toggleMenu() {
     menu.classList.toggle('menu-opened');

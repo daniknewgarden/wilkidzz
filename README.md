@@ -8,7 +8,7 @@ After downloading run `npm install` to download dependencies.
 
 ## Start and build
 
-`npm start` - start project in development mode.
+`npm start` - start project in development mode.        
 `npm run build` - build production code.
 
 ## Project structure

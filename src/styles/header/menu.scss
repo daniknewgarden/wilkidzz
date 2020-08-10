@@ -161,6 +161,12 @@
         }
     }
 
+    @media (min-width: 600px) {
+        &__lang {
+            margin: 0 25px;
+        }
+    }
+
     //Desktop menu switch
     @media (min-width: 1425px) {
         position: relative;

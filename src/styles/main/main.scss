@@ -11,5 +11,7 @@
 
 //Content after first screen 
 .content-wrapper {
-    margin-top: 180px;
+    @media (min-width: 1300px) {
+        margin-top: 180px;
+    }
 }

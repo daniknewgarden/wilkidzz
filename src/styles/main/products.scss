@@ -114,6 +114,7 @@
 
         &__text-wrapper {
             margin-right: 5%;
+            max-width: 400px;
         }
 
 
@@ -133,16 +134,27 @@
         &__img-wrapper {}
     }
 
-    //Wide screen (desktop image switch)
-    @media (min-width: 1300px) {}
 
-    //Wide screen (desktop image switch)
+    @media (min-width: 999px) {
+        &__text-wrapper {
+            max-width: 500px;
+        }
+
+    }
+
+    @media (min-width: 1200px) {
+        &--reversed {
+            .product__text-wrapper {
+                margin: 0 0 0 2%;
+            }
+        }
+    }
+
     @media (min-width: 1300px) {
         margin-top: 130px;
 
         &__text-wrapper {
             padding: 25px 0 0 50px;
-            max-width: 664px;
             margin: 0 0 0 8%;
         }
 
@@ -199,7 +211,9 @@
 
     @media (min-width: 1550px) {
 
-        &__text-wrapper {}
+        &__text-wrapper {
+            max-width: 664px;
+        }
 
         &--reversed {
             &__text-wrapper {

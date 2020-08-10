@@ -13,26 +13,7 @@ After downloading run `npm install` to download dependencies.
 
 ## Project structure
 
-.
-├── **dist**
-├── **src**  
-│ ├── index.html  
-│ ├── index.js  
-│ ├── **js**  
-│ │ └── menu.js  
-│ ├── **static**  
-│ │ └── images /
-│ └── **styles**
-│ ├── app.scss  
-│ ├── **footer/**
-│ ├── **header/**  
-│ ├── **main/**
-│ └── **utils/**  
-├── README.md  
-├── package-lock.json  
-├── package.json  
-├── postcss.config.js  
-└── webpack.config.js
+![](https://i.imgur.com/W9NS0l0.png)
 
 ### Main folders
 

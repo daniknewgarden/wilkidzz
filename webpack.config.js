@@ -6,31 +6,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin'); //Css separate 
 const CopyPlugin = require('copy-webpack-plugin'); //Copy static files plugin
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Require  html-webpack-plugin plugin
 
-// Main const
-const PATHS = {
-  src: path.join(__dirname, '../src'),
-  dist: path.join(__dirname, '../dist'),
-  assets: 'static/'
-}
-
 //Modules
 module.exports = {
   entry: __dirname + "/src/index.js", // webpack entry point. Module to start building dependency graph
   output: {
     path: __dirname + '/dist', // Folder to store generated bundle
     filename: 'bundle.js' // public URL of the output directory when referenced in a browser
-  },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          name: 'vendors',
-          test: /node_modules/,
-          chunks: 'all',
-          enforce: true
-        }
-      }
-    }
   },
   module: {
     rules: [
@@ -91,11 +72,12 @@ module.exports = {
       },
       //Images
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif|webp|svg)$/i,
         use: [{
           loader: 'file-loader',
           options: {
-            name: '[name].[ext]'
+            name: '[name].[ext]',
+            outputPath: 'images/'
           }
         }]
       },
@@ -122,13 +104,10 @@ module.exports = {
       chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css'
     }),
     new CopyPlugin({
-      patterns: [
-        // Images:
-        {
-          from: `src/static`,
-          to: `static`
-        }
-      ],
+      patterns: [{
+        from: 'src/static/images',
+        to: 'images'
+      }],
     }),
   ],
   devServer: { // configuration for webpack-dev-server

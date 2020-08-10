@@ -18,6 +18,7 @@
         opacity: 0;
         flex-direction: column;
         justify-content: space-around;
+        align-items: center;
         padding: 80px 30px 30px 30px;
         height: 100vh;
         background-color: #fff;
@@ -42,6 +43,15 @@
         line-height: 27px;
         letter-spacing: 0.3px;
         color: $color-link;
+
+        //Focus
+        &:focus {
+            outline: none;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: $color-accent;
+            color: $color-body;
+        }
     }
 
     // .menu__buttons
@@ -50,20 +60,32 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        max-width: 530px;
+
+        @media (min-width: 410px) {
+            justify-content: space-between;
+        }
     }
 
     //Menu controls: phone link and buttons
     &__control {
         margin-bottom: 10px;
+
+        &:focus {
+            outline: none;
+            border-radius: 5px;
+            border: 3px solid $color-accent;
+        }
     }
 
     // .menu__phone
     &__phone {
-        padding-left: 30px;
+        padding-left: 40px;
         max-width: 185px;
         background: url("../static/images/icons/phone.svg") no-repeat left center;
         font-size: 18px;
         font-weight: 700;
+        letter-spacing: 0.99px;
         color: $color-link;
     }
 
@@ -152,7 +174,6 @@
             display: flex;
             opacity: 1;
             flex-direction: row;
-            justify-content: flex-end;
             height: 100%;
             padding: 0;
         }
@@ -210,7 +231,7 @@
         }
 
         &__lang {
-            margin: 0 35px;
+            margin: 0 50px;
         }
     }
 }

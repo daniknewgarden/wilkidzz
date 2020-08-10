@@ -29,8 +29,7 @@
 
     // .product__text-wrapper
     &__text-wrapper {
-        max-width: 665px !important;
-        padding: 25px 0 0 25px;
+        padding: 30px 0 0 30px;
         background: url(../static/images/icons/title-decoration.svg) no-repeat;
     }
 
@@ -65,7 +64,7 @@
         font-size: 20px;
         font-weight: 400;
         line-height: 27px;
-        padding-left: 20px;
+        padding-left: 10px;
         color: $color-text;
         margin-bottom: 10px;
     }
@@ -94,14 +93,14 @@
     //change background 
 
     &--reversed {
-        .product__img-wrapper {
+        &__img-wrapper {
             padding: 0 25px 25px 0;
             background: url(../static/images/background/green-bg-mobile.png) no-repeat bottom right;
         }
     }
 
     &--centered {
-        .product__img-wrapper {
+        &__img-wrapper {
             padding: 0 25px 25px 0;
             background: url(../static/images/background/blue-bg-mobile.png) no-repeat bottom right;
         }
@@ -114,19 +113,16 @@
         flex-wrap: nowrap;
 
         &__text-wrapper {
-            // max-width: 60%;
+            margin-right: 5%;
         }
 
-        &__subtitle {
-            margin: 45px 0 40px 0;
-        }
+
 
         &--reversed {
             flex-direction: row-reverse;
 
-            .product__img-wrapper {
+            &__img-wrapper {
                 margin-left: 0;
-                margin-right: 3%;
             }
         }
 
@@ -134,11 +130,11 @@
             justify-content: center;
         }
 
-        &__img-wrapper {
-            margin-left: 3%;
-        }
+        &__img-wrapper {}
     }
 
+    //Wide screen (desktop image switch)
+    @media (min-width: 1300px) {}
 
     //Wide screen (desktop image switch)
     @media (min-width: 1300px) {
@@ -146,8 +142,8 @@
 
         &__text-wrapper {
             padding: 25px 0 0 50px;
-            max-width: 630px;
-            margin: 0 0 0 10%;
+            max-width: 664px;
+            margin: 0 0 0 8%;
         }
 
         &__title {
@@ -156,20 +152,22 @@
 
         &__subtitle {
             font-size: 20px;
+            margin: 40px 0;
         }
 
         &__list-item {
             font-size: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         &__link {
-            margin-top: 45px;
+            // margin-top: 30px;
         }
 
         //New background image
         &__img-wrapper {
             max-height: 775px;
+            margin: 0;
             padding: 0 0 50px 50px;
             background: url(../static/images/background/red-bg.png) no-repeat bottom left;
             background-size: 87.8%;
@@ -184,6 +182,7 @@
                 padding: 0 50px 50px 0;
                 background: url(../static/images/background/green-bg.png) no-repeat bottom right;
                 background-size: 81.6%;
+                margin-right: 40px;
             }
         }
 
@@ -198,7 +197,15 @@
         }
     }
 
+    @media (min-width: 1550px) {
 
+        &__text-wrapper {}
 
+        &--reversed {
+            &__text-wrapper {
+                margin: 0 8% 0 0;
+            }
+        }
 
+    }
 }

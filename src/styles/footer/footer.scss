@@ -33,7 +33,7 @@
         }
 
         @media (min-width: 1000px) {
-            padding: 15px 7.8%;
+            width: 23%;
         }
 
     }
@@ -57,6 +57,18 @@
         font-weight: 400;
         line-height: 34px;
         color: $color-text;
+
+        //hover 
+        &:hover {
+            color: $color-accent;
+        }
+
+        //Focus 
+        &:focus {
+            padding: 5px;
+            color: $color-body;
+            background-color: $color-accent;
+        }
     }
 
     // .footer-menu__social-wrapper
@@ -71,6 +83,11 @@
         height: 40px;
         border-radius: 50%;
         border: 1px solid $color-line;
+
+        &:hover,
+        &:focus {
+            border: 1px solid $color-accent;
+        }
 
         &:not(:first-child) {
             margin-left: 15px;

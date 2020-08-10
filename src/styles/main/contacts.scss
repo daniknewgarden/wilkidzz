@@ -1,70 +1,101 @@
 .contacts {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 565px;
-    padding: 15px;
-    background: url(../static/images/contacts/con-bg-mobile.jpg) no-repeat center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 565px;
+  padding: 15px;
+  background: url(../static/images/contacts/con-bg-mobile.jpg) no-repeat center;
+  background-size: cover;
+  text-align: center;
+
+  //Bg eclipce
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.31);
+    z-index: 2;
+  }
+
+  //All elements to the fore
+  * {
+    position: relative;
+    z-index: 3;
+  }
+
+  // .contacts__title
+  &__title {
+  }
+
+  // .contacts__text
+  &__text {
+    margin-top: 25px;
+  }
+
+  // .contacts__bottom-part
+  &__bottom-part {
+    border-top: 1px solid #ebebeb;
+    width: 80%;
+    margin-top: 45px;
+    padding: 50px 0;
+  }
+
+  // .contacts__number
+  &__number {
+    font-family: Barlow;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 25px;
+    color: $color-body;
+
+    //hover
+    &:hover {
+      color: $color-accent;
+    }
+
+    //Focus
+    &:focus {
+      color: $color-accent;
+    }
+  }
+
+  // .contacts__schedule
+  &__schedule {
+    margin-top: 22px;
+    font-family: Barlow;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 17px;
+    color: $color-body;
+  }
+
+  @media (min-width: 500px) {
+    background: url(../static/images/contacts/con-bg-tablet.jpg) no-repeat
+      center;
     background-size: cover;
-    text-align: center;
+  }
 
-    // .contacts__title
-    &__title {}
+  @media (min-width: 1000px) {
+    background: url(../static/images/contacts/con-bg.jpg) no-repeat center;
+    background-size: cover;
 
-    // .contacts__text
+    &__title {
+      font-size: 42px;
+    }
+
     &__text {
-        margin-top: 35px;
+      font-size: 24px;
+      line-height: 36px;
+      max-width: 730px;
     }
 
-    // .contacts__bottom-part
     &__bottom-part {
-        border-top: 1px solid #ebebeb;
-        width: 80%;
-        margin-top: 45px;
-        padding: 50px 0;
+      width: 44.736%;
     }
-
-    // .contacts__number
-    &__number {
-        font-family: Barlow;
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 25px;
-        color: $color-body;
-    }
-
-    // .contacts__schedule
-    &__schedule {
-        margin-top: 22px;
-        font-family: Barlow;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 17px;
-        color: $color-body;
-    }
-
-    @media (min-width: 500px) {
-        background: url(../static/images/contacts/con-bg-tablet.jpg) no-repeat center;
-        background-size: cover;
-    }
-
-    @media (min-width: 1000px) {
-        background: url(../static/images/contacts/con-bg.jpg) no-repeat center;
-        background-size: cover;
-
-        &__title {
-            font-size: 42px;
-        }
-
-        &__text {
-            font-size: 24px;
-            line-height: 36px;
-            max-width: 730px;
-        }
-
-        &__bottom-part {
-            width: 44.736%;
-        }
-    }
+  }
 }
